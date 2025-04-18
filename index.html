@@ -16,24 +16,28 @@
     <!--<link rel="shortcut icon" type="image/png" href="./assets/img/logo.png" />-->
 
     <!--Los scripts se colocan al final del head "aqui"-->
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Sitio Evaluacion 1</title>
 </head>
 <!-- Los breakpoint son los tamaños que queremos que la pagina se comporte de acuerdo a la pantalla (estos datos estan en la pagina de bootstrap en la seccion de layout)-->
 <!-- Contenedores, los div pueden ser contenedores, se debe establecer hay de distintos tamaños que se adaptan a la pantalla de igual manera que los BreakPoints las caracteristicas que se quieren colocar se hacen todas dentro del contendeor-->
  <!--Grid System define un contenedor con filas y columnas con hasta 12 columnas-->
  <body>
-  <nav class="nav">
-    <ul>
-      <li>
-        <a href="#">
-          <img src="assets/img/logo.png" width="100" />
-        </a>
-      </li>
-      <li><a href="#Acerca-de-Mi">Acerca de Mi</a></li>
-      <li><a href="#Trabajos">Trabajos</a></li>
-      <li><a href="#Contacto">Contacto</a></li>
-    </ul>
+  <nav class="sticky-sm-top">
+    <div class="container-fluid bg-dark text-white p-4">   
+      <ul>
+        <li>
+          <a href="#">
+            <img src="assets/img/logo.png" width="100" />
+          </a>
+        </li>
+        <li><a href="#Acerca-de-Mi">Acerca de mi</a></li>
+        <li><a href="#Trabajos">Trabajos</a></li>
+        <li><a href="#Contacto">Contacto</a></li>
+      </ul>
+    </div>
   </nav>
+  
 
   <header class="header">
     <h1>
@@ -49,11 +53,11 @@
 
   <main>
     <section class="seccion01" id="Acerca-de-mi">
-      <h1>Acerca de mi</h1>
+      <h1>Acerca de mí</h1>
       <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo enim obcaecati, libero alias expedita fuga accusantium illum omnis sunt facere minima corporis? Ratione numquam assumenda totam cupiditate. Consequatur, perferendis fuga.</h5>
       <article>
         <a>
-          <img src="assets/img/simposio-vegan.jpg" alt="Camara-Icon" />
+          <i class="fa-solid fa-camera"></i>
           <h3>Fotógrafa de comida</h3>
           <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. A odit recusandae debitis dolore laudantium autem deserunt veniam, facilis, illum ducimus ipsam, ab voluptatum quisquam repellat. Fugit magni eaque nobis ratione.</h5>
         </a>        
@@ -76,48 +80,71 @@
       </article>
     </section>
 
-    <section class="seccion02" id="Mis-Trabajos">
-      
+    <section class="seccion02" id="Mis-Trabajos">   
+      <div class = "container-fluid bg-info text-white p-4"> 
+        <h1>Mis Trabajos</h1>
+        <div class="row">
+          <article class="col card me-5 " style="width: 18rem;">
+            <img class= "img-fluid" src="assets/img/card-1.jpg"  alt="Asado de la Patagonia" />
+            <div class="card-body">
+              <h5 class="card-title">Asado de la Patagonia</h5>
+              <p class="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+          </article>
+
+          <article class="col card me-5" style="width: 18rem;">
+            <img src="assets/img/card-2.jpg" alt="Papas del fin del Mundo" />
+            <div class="card-body">
+              <h5 class="card-title">Papas del fin del Mundo</h5>
+              <p class="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+          </article>
+
+          <article class="col card " style="width: 18rem;">
+            <img src="assets/img/card-3.jpg" alt="Salmones de Alaska" />
+            <div class="card-body">
+              <h5 class="card-title">Salmones de Alaska</h5>
+              <p class="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
+  
+    <section class="seccion03" id="Contactame">
+      <h2>Contáctame</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt exercitationem commodi fuga cum blanditiis quae dolorum quas veniam explicabo soluta. Quia odio laudantium sit explicabo expedita eveniet fugit, inventore necessitatibus.</p>
 
-    <section class="seccion03" id="Eventos">
-      <h2>Eventos anteriores</h2>
-
-      <article>
-        <a href="evento01.html">
-          <img src="assets/img/simposio-vegan.jpg" alt="Events simposio vegan" />
-          <h3>Simposio Vegan DB</h3>
-        </a>        
-      </article>
-
-      <article>
-        <a href="#">
-          <img src="assets/img/machine-learning.jpg" alt="machine-learning" />
-          <h3>Machine learning 101</h3>
-        </a>        
-      </article>
-
-      <article>
-        <a href="#">
-          <img src="assets/img/scrum-sin-scream.jpg" alt="scrum-sin-scream" />
-          <h3>Scrum sin scream</h3>
-        </a>        
-      </article>
+      <div class="mb-3"> 
+        <label for="InputNombre" class="form-label">Nombre</label> 
+      
+        <input type="name" class="form-control" id="InputNombre" placeholder="Ej. Kenny Bell"> 
+      
+      </div> 
+      
+      <div class="mb-3"> 
+        <label for="exampleFormControlInput1" class="form-label">Correo Electrónico</label> 
+      
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="correo@correo.com"> 
+      
+      </div> 
+      <div class="mb-3"> 
+      
+        <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label> 
+      
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> 
+      
+      </div> 
     </section>
   </main>
 
 
-<footer class="footer " id="Contacto">
-  <a href="https://github.com" target="_blank">
-    <i class="fa-brands fa-github fa-3x"></i>
-  </a>
-  <a href="https://twitter.com" target="_blank">
-    <i class="fa-brands fa-x-twitter fa-3x"></i>
-  </a>
-  <a href="https://www.linkedin.com" target="_blank">
-    <i class="fa-brands fa-linkedin fa-3x"></i>
-  </a>
-  <p>Meet & Coffe 2018 Todos los derechos reservados.</p>
+<footer class="container-fluid bg-dark text-white p-2" id="Contacto">
+  <!--class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill"-->
+  <p >Olivia Ros ©2015 Todos los derechos reservados.</p>
 </footer>
   
 </body>
