@@ -1,113 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Conexion con Bootstrap, sacada desde la misma pagina en download, hay dos opciones en la pagina bundle o popper, aqui esta puesto el bundle-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <!-- Todo archivo propio debe ir debajo del archivo de bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Conexion con Bootstrap, sacada desde la misma pagina en download, hay dos opciones en la pagina bundle o popper, aqui esta puesto el bundle-->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+      <!-- Todo archivo propio debe ir debajo del archivo de bootstrap-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap" rel="stylesheet">
-    <!--<link rel="shortcut icon" type="image/png" href="./assets/img/logo.png" />-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap" rel="stylesheet">
+      <!--<link rel="shortcut icon" type="image/png" href="./assets/img/logo.png" />-->
 
-    <!--Los scripts se colocan al final del head "aqui"-->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Sitio Evaluacion 1</title>
-</head>
-<!-- Los breakpoint son los tamaños que queremos que la pagina se comporte de acuerdo a la pantalla (estos datos estan en la pagina de bootstrap en la seccion de layout)-->
-<!-- Contenedores, los div pueden ser contenedores, se debe establecer hay de distintos tamaños que se adaptan a la pantalla de igual manera que los BreakPoints las caracteristicas que se quieren colocar se hacen todas dentro del contendeor-->
+      <!--Los scripts se colocan al final del head "aqui"-->
+      <link rel="stylesheet" href="assets/css/style.css" />
+      <title>Sitio Evaluacion 1</title>
+  </head>
+  <!-- Los breakpoint son los tamaños que queremos que la pagina se comporte de acuerdo a la pantalla (estos datos estan en la pagina de bootstrap en la seccion de layout)-->
+  <!-- Contenedores, los div pueden ser contenedores, se debe establecer hay de distintos tamaños que se adaptan a la pantalla de igual manera que los BreakPoints las caracteristicas que se quieren colocar se hacen todas dentro del contendeor-->
  <!--Grid System define un contenedor con filas y columnas con hasta 12 columnas-->
  <body>
-  <nav class="sticky-sm-top">
-    <div class="container-fluid bg-dark text-white p-4">   
-      <ul>
-        <li>
-          <a href="#">
-            <img src="assets/img/logo.png" width="100" />
-          </a>
-        </li>
-        <li><a href="#Acerca-de-Mi">Acerca de mi</a></li>
-        <li><a href="#Trabajos">Trabajos</a></li>
-        <li><a href="#Contacto">Contacto</a></li>
-      </ul>
+  <nav class="navbar navbar-expand-md sticky-sm-top bg-body-tertiary" data-bs-theme="dark">
+    <div class="container">      
+      <a class="navbar-brand" href="#">
+        <img class="img-navbar" src="assets/img/logo.png" width="100" />
+      </a>
+      <!--Boton costado-->
+      <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> 
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">        
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#acerca-de-mi">Acerca de mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#mis-trabajos">Trabajos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#contactame">Contacto</a>
+            </li>          
+          </ul>          
+        </div>
+      </div>
     </div>
   </nav>
   
+  
 
-  <header class="header">
-    <h1>
-      Comidas del fin <br />
-      del Mundo
-    </h1>
-    <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio harum neque provident minus iusto voluptatem blanditiis, ducimus maxime soluta illo a assumenda inventore sapiente! Doloremque alias quibusdam quod suscipit aspernatur!</h5>
-      <ul>
-        <li>Trabajo</li>
-        <li>Contacto</li>
-      </ul>
+  <header class="banner d-flex justify-content-center align-items-center text-end text-white p-5">
+    <div class="container">
+      <h1 class="display-3 py-5">
+        Comidas del fin <br />
+        del mundo
+      </h1>
+      <div class="container">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio harum neque provident minus iusto voluptatem blanditiis, ducimus maxime soluta illo a assumenda inventore sapiente! Doloremque alias </p>
+      </div>
+              
+      <button class="btn btn-outline-primary text-white me-3">Trabajo</button>
+      <button class="btn btn-outline-primary text-white">Contacto</button>
+        
+    </div>
   </header>
 
   <main>
-    <section class="seccion01" id="Acerca-de-mi">
-      <h1>Acerca de mí</h1>
-      <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo enim obcaecati, libero alias expedita fuga accusantium illum omnis sunt facere minima corporis? Ratione numquam assumenda totam cupiditate. Consequatur, perferendis fuga.</h5>
-      <article>
-        <a>
-          <i class="fa-solid fa-camera"></i>
-          <h3>Fotógrafa de comida</h3>
-          <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. A odit recusandae debitis dolore laudantium autem deserunt veniam, facilis, illum ducimus ipsam, ab voluptatum quisquam repellat. Fugit magni eaque nobis ratione.</h5>
-        </a>        
-      </article>
-
-      <article>
-        <a>
-          <img src="assets/img/machine-learning.jpg" alt="Crítica-culinario" />
-          <h3>Crítica culinario</h3>
-          <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis possimus aut consequatur officia sapiente. Voluptatibus, beatae nostrum aperiam officia suscipit quidem ab hic asperiores quaerat vitae totam dicta, nisi doloribus.</h5>
-        </a>        
-      </article>
-
-      <article>
-        <a>
-          <img src="assets/img/scrum-sin-scream.jpg" alt="Bloggera-de-viajes" />
-          <h3>Bloggera de viajes</h3>
-          <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officia quasi consequuntur totam quisquam obcaecati unde facere ab aspernatur modi minus molestiae ipsum, debitis minima eius repudiandae quibusdam nulla sed.</h5>
-        </a>        
-      </article>
+    <section class="seccion01" id="acerca-de-mi">
+      <div class="container">
+        <div class="row ">
+          <div class="col text-center">
+            <h1 class="display-1">Acerca de mí</h1>          
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo enim obcaecati, libero alias expedita fuga accusantium illum omnis sunt facere minima corporis? Ratione numquam assumenda totam cupiditate. Consequatur, perferendis fuga.</p>
+            </div>               
+          </div>      
+          <div class="row text-center ">
+            <article class="col-lg-4 ">          
+              <i class="fa-solid fa-camera fa-3x "></i>
+              <h3>Fotógrafa de comida</h3>
+              <p class="Justificado">Lorem ipsum dolor sit amet consectetur adipisicing elit. A odit recusandae debitis dolore laudantium autem deserunt veniam,</p>
+            </article>
+      
+            <article class="col-lg-4">
+              <i class="fa-solid fa-bullhorn fa-3x"></i>
+              <h3>Crítica culinario</h3>
+              <p class="Justificado">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis possimus aut consequatur officia sapiente. Voluptatibus, </p>  
+            </article>
+      
+            <article class="col-lg-4">
+              <i class="fa-solid fa-map fa-3x"></i>
+              <h3>Bloggera de viajes</h3>
+              <p class="Justificado">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officia quasi consequuntur totam quisquam obcaecati unde </p>
+            </article>
+          </div>
+      </div>      
+      </div>
+      
     </section>
 
-    <section class="seccion02" id="Mis-Trabajos">   
-      <div class = "container-fluid bg-info text-white p-4"> 
-        <h1>Mis Trabajos</h1>
+    <section class="seccion02" id="mis-trabajos">   
+      <div class = "container-fluid bg-info text-white p-2"> 
+        <h1 class="text-center mb-3">Mis Trabajos</h1>
         <div class="row">
-          <article class="col card me-5 " style="width: 18rem;">
-            <img class= "img-fluid" src="assets/img/card-1.jpg"  alt="Asado de la Patagonia" />
-            <div class="card-body">
-              <h5 class="card-title">Asado de la Patagonia</h5>
-              <p class="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
-              <a href="#" class="btn btn-primary">Ver más</a>
+          <article class="col-lg-4 d-flex align-items-stretch">
+            <div class="card height-300px mb-3">
+              <img  src="assets/img/card-1.jpg" class="card-img-top" alt="Asado de la Patagonia" height="300px"/>
+              <div class="card-body">
+                <h5 class="card-title">Asado de la Patagonia</h5>
+                <p class="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>                
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-outline-info">Ver más</a>
+              </div>
             </div>
           </article>
-
-          <article class="col card me-5" style="width: 18rem;">
-            <img src="assets/img/card-2.jpg" alt="Papas del fin del Mundo" />
-            <div class="card-body">
-              <h5 class="card-title">Papas del fin del Mundo</h5>
-              <p class="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
-              <a href="#" class="btn btn-primary">Ver más</a>
-            </div>
+          
+          <article class="col-lg-4 d-flex align-items-stretch">
+            <div class="card mb-3">
+              <img src="assets/img/card-2.jpg " class="card-img-top" alt="Papas del fin del Mundo" height="300px"/>
+              <div class="card-body">
+                <h5 class="card-title">Papas del fin del Mundo</h5>
+                <p class="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>                
+              </div>
+              <div class="card-footer">
+                <a  class="btn btn-outline-info" href="#">Ver más</a>
+              </div>
+            </div>            
           </article>
 
-          <article class="col card " style="width: 18rem;">
-            <img src="assets/img/card-3.jpg" alt="Salmones de Alaska" />
-            <div class="card-body">
-              <h5 class="card-title">Salmones de Alaska</h5>
-              <p class="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
-              <a href="#" class="btn btn-primary">Ver más</a>
+          <article class="col-lg-4 d-flex align-items-stretch">
+            <div class="card mb-3">
+              <img src="assets/img/card-3.jpg" class = "card-img-top"alt="Salmones de Alaska" width="934px" height="300px"/>
+              <div class="card-body">
+                <h5 class="card-title">Salmones de Alaska</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ipsa corrupti maxime. Libero eum, consequatur dicta nostrum atque voluptas, provident voluptatem delectus, illo repudiandae vitae.</p>              
+              </div>
+              <div class="card-footer">
+                <a class="btn btn-outline-info" href="#" >Ver más</a>
+              </div>
             </div>
           </article>
         </div>
@@ -115,38 +149,46 @@
     </section>
   
     <section class="seccion03" id="Contactame">
-      <h2>Contáctame</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt exercitationem commodi fuga cum blanditiis quae dolorum quas veniam explicabo soluta. Quia odio laudantium sit explicabo expedita eveniet fugit, inventore necessitatibus.</p>
-
-      <div class="mb-3"> 
-        <label for="InputNombre" class="form-label">Nombre</label> 
-      
-        <input type="name" class="form-control" id="InputNombre" placeholder="Ej. Kenny Bell"> 
-      
-      </div> 
-      
-      <div class="mb-3"> 
-        <label for="exampleFormControlInput1" class="form-label">Correo Electrónico</label> 
-      
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="correo@correo.com"> 
-      
-      </div> 
-      <div class="mb-3"> 
-      
-        <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label> 
-      
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> 
-      
-      </div> 
+      <div class="container ">
+        <div class="container-fluid text-center m-5">
+          <h2>Contáctame</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt exercitationem commodi fuga cum blanditiis quae dolorum quas veniam explicabo soluta. Quia odio laudantium sit explicabo expedita eveniet fugit, inventore necessitatibus.</p>
+        </div>
+        
+        <div class="container-fluid mb-3 position-relative">
+          <div class="mb-3"> 
+            <label for="InputNombre" class="form-label">Nombre</label> 
+          
+            <input type="name" class="form-control" id="InputNombre" placeholder="Ej. Kenny Bell"> 
+          
+          </div> 
+          
+          <div class="mb-3"> 
+            <label for="exampleFormControlInput1" class="form-label">Correo Electrónico</label> 
+          
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="correo@correo.com"> 
+          
+          </div> 
+          <div class="mb-3"> 
+          
+            <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label> 
+          
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> 
+          
+          </div> 
+           </div>  
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-outline-info me-md-2" type="button">Enviar</button>  
+        </div>
+      </div>        
     </section>
   </main>
 
 
-<footer class="container-fluid bg-dark text-white p-2" id="Contacto">
-  <!--class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill"-->
-  <p >Olivia Ros ©2015 Todos los derechos reservados.</p>
-</footer>
-  
+  <footer class="container-fluid bg-dark text-light text-center p-2 " id="Contacto">
+    <!--class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill"-->
+    <p>Olivia Ros ©2015 Todos los derechos reservados.</p>
+  </footer>  
 </body>
 </html>
 

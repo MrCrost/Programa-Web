@@ -1,3 +1,27 @@
+
+.banner{
+    background-image: url(../img/bg-hero.jpg);
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 60px;
+}
+.Lista{
+    display: inline-block;
+}
+
+.Justificado{
+    padding-left: 10%;
+    text-align: justify;
+}
+.seccion02{
+    img{
+        object-fit: cover;
+        
+    }
+}
 footer{
     font-size: 14px;
 }
+
